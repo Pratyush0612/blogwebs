@@ -60,11 +60,11 @@ export default function DashboardComp() {
         console.log(error.message);
       }
     };
-    if (currentUser.isAdmin) {
+    // if (currentUser.isAdmin || !currentUser.isAdmin) {
       fetchUsers();
       fetchPosts();
       fetchComments();
-    }
+    // }
   }, [currentUser]);
   return (
     <div className='p-3 md:mx-auto'>

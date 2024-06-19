@@ -98,8 +98,8 @@ export const createComment = async (req, res, next) => {
   };
 
   export const getcomments = async (req, res, next) => {
-    if (!req.user.isAdmin)
-      return next(errorHandler(403, 'You are not allowed to get all comments'));
+    // if (!req.user.isAdmin)
+    //   return next(errorHandler(403, 'You are not allowed to get all comments'));
     try {
       const startIndex = parseInt(req.query.startIndex) || 0;
       const limit = parseInt(req.query.limit) || 9;

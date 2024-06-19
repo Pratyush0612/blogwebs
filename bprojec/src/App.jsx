@@ -32,9 +32,10 @@ export default function App() {
     <Route path="/sign-in" element={<SignIn />} />
     <Route path="/sign-up" element={<SignUp />} />
     <Route path="/search" element={<Search />} />
-    <Route element={<OnlyAdminPrivateRoute/>} >
     <Route path="/create-post" element={<CreatePost />} /> 
     <Route path="/update-post/:postId" element={<UpdatePost />} />      
+    <Route element={<OnlyAdminPrivateRoute/>} >
+    
       </Route>
   </Routes>
   <Footer />

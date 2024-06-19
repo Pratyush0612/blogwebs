@@ -215,7 +215,7 @@ uploadTask.on(
        outline disabled={loading || imageFileUploading}>
         {loading ? 'Loading...' : 'Update'}
        </Button>
-       {currentUser.isAdmin && (
+       {/* {currentUser.isAdmin && ( */}
           <Link to={'/create-post'}>
             <Button
               type='button'
@@ -225,7 +225,7 @@ uploadTask.on(
               Create a post
             </Button>
           </Link>
-        )}
+         {/* )}  */}
 
               </form>
               <div className='text-red-600 flex justify-between'>

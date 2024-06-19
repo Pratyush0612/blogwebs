@@ -25,9 +25,9 @@ const [userIdToDelete, setUserIdToDelete] = useState('');
         console.log(error.message);
       }
     };
-    if (currentUser.isAdmin) {
+    // if (currentUser.isAdmin) {
       fetchUsers();
-    }
+    // }
   }, [currentUser._id]);
   
   const handleShowMore = async () => {
@@ -68,7 +68,7 @@ const [userIdToDelete, setUserIdToDelete] = useState('');
     <div className='table-auto overflow-x-scroll md:mx-auto p-3 
     scrollbar scrollbar-track-slate-100 scrollbar-thumb-slate-300
     dark:scrollbar-track-slate-700 dark:scrollbar-thumb-slate-500'>
-  {currentUser.isAdmin && users.length > 0 ? (
+    {currentUser.isAdmin && users.length > 0 ? (
         <>
           <Table hoverable className='shadow-md'>
             <Table.Head>

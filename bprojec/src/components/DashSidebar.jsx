@@ -38,7 +38,8 @@ export default function DashSidebar() {
     <Sidebar className='w-full md:w-56'>
       <Sidebar.Items>
         <Sidebar.ItemGroup className='flex flex-col gap-1'>
-        {currentUser && currentUser.isAdmin && (
+        {/* {currentUser && currentUser.isAdmin && ( */}
+          {/* {currentUser && currentUser.isAdmin && ( */}
             <Link to='/dashboard?tab=dash'>
               <Sidebar.Item
                 active={tab === 'dash' || !tab}
@@ -48,7 +49,7 @@ export default function DashSidebar() {
                 Dashboard
               </Sidebar.Item>
             </Link>
-          )}    
+          {/* )}     */}
        
         <Link to='/dashboard?tab=profile'>
         <Sidebar.Item 
@@ -60,7 +61,7 @@ export default function DashSidebar() {
                 Profile
               </Sidebar.Item> 
               </Link>
-              {currentUser.isAdmin && (
+              {/* {currentUser.isAdmin && ( */}
               <Link to='/dashboard?tab=posts'>
               <Sidebar.Item
                 active={tab === 'posts'}
@@ -69,9 +70,9 @@ export default function DashSidebar() {
               > Posts
               </Sidebar.Item>
             </Link>
- )}
-    {currentUser.isAdmin && (
-      <>
+  {/* )}  */}
+    {/* {!currentUser.isAdmin && (
+      <> */}
               <Link to='/dashboard?tab=users'>
               <Sidebar.Item
                 active={tab === 'users'}
@@ -89,8 +90,8 @@ export default function DashSidebar() {
                   Comments
                 </Sidebar.Item>
               </Link>
-            </>
- )}
+            {/* </>
+ )} */}
 
      <Sidebar.Item icon={HiArrowSmRight} className='cursor-pointer' onClick={handleSignout} >
                Sign Out
